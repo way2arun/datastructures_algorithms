@@ -2,7 +2,7 @@
 # Time Complexity  :- O(n)
 
 
-def palindrome_permutations(input_string: object, i: object, length: object):
+def palindrome_permutations(input_string: str, i: int, length: int):
     if i == length:
         palindrome_string: str = ''.join(input_string)
         print(palindrome_string)
