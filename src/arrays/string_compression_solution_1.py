@@ -39,3 +39,5 @@ def string_compression(input_string1):
 # Driver Call
 print(string_compression("aabcccccaaa"))
 print(string_compression("aabbbbbbcccccaaaddd"))
+print(string_compression("abb"))
+
