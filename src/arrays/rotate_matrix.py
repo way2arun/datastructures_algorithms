@@ -9,24 +9,24 @@ def rotate_90_degrees(matrix):
     # Get the matrix length
     matrix_length = len(matrix)
 
-    for x in range(matrix_length // 2):
-        start = x
-        end = matrix_length - x - 1
-        for y in range(start, end):
+    for row in range(matrix_length // 2):
+        start = row
+        end = matrix_length - row - 1
+        for col in range(start, end):
             # Copy the top
-            top = matrix[x][y]
+            top = matrix[row][col]
 
             # Top = Left [Left --> Top ]
-            matrix[x][y] = matrix[-y - 1][x]
+            matrix[row][col] = matrix[-col - 1][row]
 
             # Left = Bottom [ Bottom --> Left ]
-            matrix[-y - 1][x] = matrix[-x - 1][-y - 1]
+            matrix[-col - 1][row] = matrix[-row - 1][-col - 1]
 
             # Bottom = Right [ right -> bottom ]
-            matrix[-x - 1][-y - 1] = matrix[y][- x - 1]
+            matrix[-row - 1][-col - 1] = matrix[col][- row - 1]
 
             # right = top [ top -> right ]
-            matrix[y][- x - 1] = top
+            matrix[col][- row - 1] = top
 
     # Print the output
     print(matrix)
