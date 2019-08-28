@@ -2,7 +2,7 @@
 write a method to rotate the image by 90 degrees. """
 
 # Time Complexity - O(n^2)
-# Space Complexity - O(x+y)
+# Space Complexity - O(x+y)  
 
 
 def rotate_90_degrees(matrix):
