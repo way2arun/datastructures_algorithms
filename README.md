@@ -12,5 +12,5 @@ static code analysis.
 
 For Python - [pylint](https://github.com/pycqa/pylint) is good for code analysis and [AutoPep8](https://github.com/hhatto/autopep8) automatically fixes pep8.
 
-
+As usual I always vote for [PyCharm](https://www.jetbrains.com/pycharm/download/#section=windows)
 
