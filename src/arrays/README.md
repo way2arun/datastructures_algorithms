@@ -11,11 +11,11 @@
 7. Don’t worry about preserving the integrity of the array (sortedness, keeping equal entries together, etc.) until it is time to return.
 8. An array can serve as a good data structure when you know the distribution of the elements in advance. For example, a Boolean array of length W is a good choice for representing a subset of f0; 1; : : : ;W 􀀀 1g. (When using a Boolean array to represent a subset of f1; 2; 3; : : : ; ng, allocate an array of size n + 1 to simplify indexing.).
 9. When operating on 2D arrays, use parallel logic for rows and for columns.
-10. Sometimes it’s easier to simulate the specification, than to analytically solve for the result. For example, rather than writing a formula for the i-th entry in the spiral order for an n  n matrix, just compute the output from the beginning.
+10. Sometimes it’s easier to simulate the specification, than to analytically solve for the result. For example, rather than writing a formula for the i-th entry in the spiral order for an n x n matrix, just compute the output from the beginning.
 
-## I took the above extract from
+## I took the above extract from [Elements of Programming Interviews in Python](http://elementsofprogramminginterviews.com/sample/epilight_python_new.pdf).
 ```
-   [Elements of Programming Interviews in Python] visit http://elementsofprogramminginterviews.com/sample/epilight_python_new.pdf
+   [Elements of Programming Interviews in Python]
    The Insider's Guide
    -Adnan Aziz
    -Tsung-Hsien Lee
