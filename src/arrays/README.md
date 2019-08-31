@@ -15,7 +15,7 @@
 
 ## I took the above extract from
 ```
-   [Elements of Programming Interviews in Python](http://elementsofprogramminginterviews.com/sample/epilight_python_new.pdf)
+   [Elements of Programming Interviews in Python](http://elementsofprogramminginterviews.com/sample/epilight_python_new.pdf).
    The Insider's Guide
    -Adnan Aziz
    -Tsung-Hsien Lee
