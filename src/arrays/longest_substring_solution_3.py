@@ -1,14 +1,11 @@
 def longest_substring(input_string1):
-    substring = ''
+    substring = []
     substring_length = 0
     for char in input_string1:
         if char in substring:
-            if len(substring) > substring_length:
-                substring_length = len(substring)
             substring = substring[substring.index(char) + 1:]
-        substring += char
-    if len(substring) > substring_length:
-        substring_length = len(substring)
+        substring.append(char)
+        substring_length = max(substring_length, len(substring))
     print(substring)
     return substring_length
 

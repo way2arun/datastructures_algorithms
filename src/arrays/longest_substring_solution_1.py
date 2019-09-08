@@ -1,16 +1,21 @@
 def longest_substring(input_string1):
-    string_len = len(input_string1)
-    substring = [input_string1[0]]
-    for i in range(1, string_len):
-        if input_string1[i] != input_string1[i - 1] and input_string1[i] not in substring:
-            substring.append(input_string1[i])
+    substring_length = 0
+    substring = ''
+    for char in input_string1:
+        if char not in substring:
+            substring += char
+            substring_length = max(substring_length, len(substring))
         else:
-            return ''.join(substring)
+            remove_char = substring.index(char)
+            substring = substring[remove_char + 1:] + char
+    print(substring)
+    return substring_length
 
-    return ''.join(substring)
 
-
+# Driver Code
 print(longest_substring("abca"))
 print(longest_substring("abcdabcd"))
 print(longest_substring("aaaaaaaaa"))
 print(longest_substring("hello world"))
+print(longest_substring("abcabcbb"))
+print(longest_substring("pwwkew"))
