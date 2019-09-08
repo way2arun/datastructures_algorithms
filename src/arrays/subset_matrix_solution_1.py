@@ -46,3 +46,12 @@ big_matrix = [[1, 3, 5], [3, 2, 4], [5, 4, 1]]
 small_matrix = [[3, 5, 1]]
 
 isSubset(big_matrix, small_matrix)
+
+
+big_matrix = [[1, 3, 5], [3, 2, 4], [5, 4, 1]]
+small_matrix = [[3, 5, 1], [1,2,3]]
+isSubset(big_matrix, small_matrix)
+
+big_matrix = [[1, 3, 5], [3, 2, 4], [5, 4, 1]]
+small_matrix = [[9,8,9], [8,8,8]]
+isSubset(big_matrix, small_matrix)
