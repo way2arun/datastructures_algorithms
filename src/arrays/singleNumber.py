@@ -1,7 +1,7 @@
-#Leet Code challenge
+# Leet Code challenge
 
 class Solution:
-    def singleNumber(self, nums:[int]) -> int:
+    def singleNumber(self, nums: [int]) -> int:
         # Get the first number
         result = nums[0]
 
@@ -15,7 +15,8 @@ class Solution:
         # Return result
         return result
 
+
 # Main Call
-solution =  Solution()
-result = solution.singleNumber([1,1,2,2,3,4,4,5,5])
+solution = Solution()
+result = solution.singleNumber([1, 1, 2, 2, 3, 4, 4, 5, 5])
 print(result)
