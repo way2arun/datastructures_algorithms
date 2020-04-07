@@ -1,4 +1,3 @@
-
 """
 Given an integer array arr, count element x such that x + 1 is also in arr.
 
@@ -40,7 +39,7 @@ class Solution:
             number_counts[i] = 1
         result = 0
         for x in arr:
-            if x+ 1 in number_counts:
+            if x + 1 in number_counts:
                 result += 1
         return result
 
