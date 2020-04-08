@@ -43,14 +43,14 @@ class Solution:
 
         return index[mid]
 
-        ("\n"
-         "        # Runtime = 68ms \n"
-         "        fast = slow = head\n"
-         "        while fast and fast.next:\n"
-         "            fast, slow = fast.next.next, slow.next\n"
-         "        return slow\n"
-         "        ")
-
+        """
+         # Runtime = 68ms 
+         fast = slow = head
+         while fast and fast.next:
+              fast, slow = fast.next.next, slow.next
+         return slow
+         
+        """
     def print_nodes(self, node):
         node_list = []
         while node:
