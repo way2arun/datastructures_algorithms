@@ -62,6 +62,7 @@ class Solution:
         return 0
         """
 
+
 # Main Call
 solution = Solution()
 result = solution.lastStoneWeight([2, 7, 4, 1, 8, 1])
