@@ -9,37 +9,38 @@ class TreeNode:
 
 
 class PrintBinaryTree:
-    def printTree(self, root: TreeNode) -> List[List[str]]:
-        # find depth of the tree
-        self.depth = self.get_height(root)
-        d = 2 ** self.depth - 1
+    def print_tree(self, root: TreeNode) -> List[List[str]]:
+        # Get the height of the tree
+        self.height = self.get_height(root)
+        print(self.height)
+        d = 2 ** self.height - 1
         # build the matrix
-        result = [["" for i in range(d)] for j in range(self.depth)]
+        result = [["" for i in range(d)] for j in range(self.height)]
         # draw on the matrix
-        self.draw(root, result, self.depth, d // 2)
+        self.draw(root, result, self.height, d // 2)
         return result
 
-    def draw(self, node, res, height, pos):
+    def draw(self, node, result, height, position):
         # draw the node
-        res[self.depth - height][pos] = str(node.val)
+        result[self.height - height][position] = str(node.val)
 
         # if this is the lowest level, we are done
         if height == 1:
             return
 
         # calculate the depth of the current node
-        node_depth = self.depth - height + 1
+        node_depth = self.height - height + 1
 
         # how much away should we place the child node(s)
-        child_sep = 2 ** (self.depth - node_depth - 1)  # self.depth is the depth of the whole tree
+        child_sep = 2 ** (self.height - node_depth - 1)
 
         # recursively draw the children node (DFS)
         if node.left is not None:
-            child_pos = pos - child_sep
-            self.draw(node.left, res, height - 1, child_pos)
+            child_pos = position - child_sep
+            self.draw(node.left, result, height - 1, child_pos)
         if node.right is not None:
-            child_pos = pos + child_sep
-            self.draw(node.right, res, height - 1, child_pos)
+            child_pos = position + child_sep
+            self.draw(node.right, result, height - 1, child_pos)
 
     def get_height(self, node):
         if node.left is None and node.right is None:
