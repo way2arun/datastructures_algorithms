@@ -77,5 +77,5 @@ result = solution.bstFromPreorder(input_list)
 
 # Lets print the binary tree
 print_tree = PrintBinaryTree()
-response = print_tree.printTree(result)
+response = print_tree.print_tree(result)
 print(response)
