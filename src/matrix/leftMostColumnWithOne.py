@@ -107,7 +107,6 @@ class Solution:
 
 
 # Main Call
-
 # Testing Binary Matrix
 input_mat = [[0, 0], [1, 1]]
 matrix = BinaryMatrix(input_mat)
