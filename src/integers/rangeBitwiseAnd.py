@@ -9,7 +9,7 @@ Example 2:
 
 Input: [0,1]
 Output: 0
-
+https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3308/
 
 """
 
