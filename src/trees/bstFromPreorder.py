@@ -47,6 +47,7 @@ class Solution:
         return tree_root
         """
         # 20 ms
+        """
         self.ln = len(preorder)
         self.root = None
         self.preorder = preorder
@@ -65,6 +66,27 @@ class Solution:
                 temp.right = traverse(temp.val, max_)
             return temp
         return traverse(-1 * float('inf'), float('inf'))
+        """
+        # Solution 3 16 ms
+        return self.traverse(preorder, 0, len(preorder) - 1, len(preorder))
+
+    def traverse(self, preorder: List[int], l: int, h: int, n: int) -> TreeNode:
+        if n == 0 or l > h or l >= n or h >= n:
+            return None
+        root = TreeNode(preorder[l])
+        if l == h:
+            return root
+        x = float('-inf')
+        for i in range(l + 1, h + 1):
+            if preorder[i] > root.val:
+                x = i - 1
+                break
+        if x == float('-inf'):
+            root.left = self.traverse(preorder, l + 1, h, n)
+        else:
+            root.left = self.traverse(preorder, l + 1, x, n)
+            root.right = self.traverse(preorder, x + 1, h, n)
+        return root
 
 
 # Main Call
