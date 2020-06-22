@@ -2,18 +2,17 @@
 
 class Solution:
     def singleNumber(self, nums: [int]) -> int:
-        # Get the first number
-        result = nums[0]
+        dict = {}
 
-        # Do XOR of all elements starting from index 1 and return the single repeating number,
-        for i in range(1, len(nums)):
-            # Do XOR
-            result = result ^ nums[i]
+        for val in nums:
+            if not val in dict:
+                dict[val] = 1
+            else:
+                dict[val] += 1
 
-        # Print result
-        print(result)
-        # Return result
-        return result
+        for k, v in dict.items():
+            if v == 1:
+                return k
 
 
 # Main Call
