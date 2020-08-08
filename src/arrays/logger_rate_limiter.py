@@ -30,6 +30,7 @@ logger.shouldPrintMessage(11,"foo"); returns true;
 
 class Logger:
     def __init__(self):
+
         """
         Initialize your data structure here.
         """
