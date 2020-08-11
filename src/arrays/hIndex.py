@@ -21,12 +21,20 @@ Follow up:
 This is a follow up problem to H-Index, where citations is now guaranteed to be sorted in ascending order.
 Could you solve it in logarithmic time complexity?
 
+   Hide Hint #1
+An easy approach is to sort the array first.
+   Hide Hint #2
+What are the possible values of h-index?
+   Hide Hint #3
+A faster approach is to use extra space.
+
 """
 from typing import List
 
 
 class Solution:
     def hIndex(self, citations: List[int]) -> int:
+        # Solution 1 - 28 ms
         """
         start = 0
         end = len(citations)
@@ -41,6 +49,7 @@ class Solution:
         return len(citations) - start
         """
         # Solution 2
+        """
         if not citations:
             return 0
 
@@ -56,6 +65,31 @@ class Solution:
                 right = mid
 
         return len(citations) - right if citations[right] >= (len(citations) - right) else 0
+        """
+
+        # Solution 3 - 16 ms
+
+        if not citations:
+            return 0
+
+        citations.sort(reverse=True)
+        h = [0]
+        for idx, val in enumerate(citations):
+
+            if val >= idx + 1:
+                h.append(idx + 1)
+
+        return max(h)
+        """
+
+        # Solution 4 - 20 ms
+        citations.sort()
+        n = len(citations)
+        for i in range(n):
+            if citations[i] >= n - i:
+                return n - i
+        return 0
+        """
 
 
 # Main Call
