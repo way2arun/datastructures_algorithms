@@ -37,8 +37,22 @@ class Solution:
                 maximum = max(maximum, dp[i][0])  # compare with maximum at current index
             return maximum
             """
-        # Solution 2 32 ms
-        if (len(nums) == 1):
+        # Solution 2 - 36 ms
+        """
+        max_num = min_num = 1
+        max_product = float('-inf')
+        for num in nums:
+            num1 = max_num * num
+            num2 = min_num * num
+            max_num = max(num, num1, num2)
+            min_num = min(num, num1, num2)
+            max_product = max(max_product, max_num)
+        return max_product
+        """
+
+        # Solution 3 32 ms
+
+        if len(nums) == 1:
             return nums[0]
         if 0 in nums:
             nums = self.splitByZero(nums)
@@ -52,6 +66,7 @@ class Solution:
             return max(products)
         else:
             return self.maxProductNoZeros(nums)
+
 
     def splitByZero(self, nums):
         retArr = []  # 2d array
