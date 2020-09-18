@@ -39,6 +39,7 @@ class Solution:
         return max(stocks[-1]["sell"], stocks[-1]["watch"])
         """
         # Solution 2 - 28 ms
+
         if not prices:
             return 0
         dp_pre = [0] * 3
