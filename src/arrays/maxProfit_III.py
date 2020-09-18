@@ -45,7 +45,7 @@ class Solution:
         return before_transaction
         """
         # Solution 2 - 56 ms
-
+        """
         n = len(prices)
         max_profit = 0
 
@@ -69,6 +69,7 @@ class Solution:
 
         return max_profit
         """
+        """
         # Solution 3 - 60 ms
         sell1, sell2, buy1, buy2 = 0, 0, -999999, -999999
         for price in prices:
@@ -78,6 +79,26 @@ class Solution:
             sell2 = max(sell2, buy2 + price)
         return sell2
         """
+        # Solution 3 - 72 ms
+        """
+        ans, dp = 0, 0
+        for i in range(0, len(prices) - 1):
+            q = prices[i + 1] - prices[i]
+            dp = max(dp + q, q)
+            ans = max(ans, dp)
+        return ans
+        """
+
+        # Solution 4 - 48 ms
+        minprice = 9999999999
+        maxprofit = 0
+        for i in range(len(prices)):
+            if prices[i] < minprice:
+                minprice = prices[i]
+            elif prices[i] - minprice > maxprofit:
+                maxprofit = prices[i] - minprice
+
+        return maxprofit
 
 
 # Main Call
