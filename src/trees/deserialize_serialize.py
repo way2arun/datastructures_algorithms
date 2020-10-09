@@ -95,11 +95,14 @@ def deserialize1(data: List[str]) -> TreeNode:
 
     return build_binary_tree(0, len(preorder), 0, len(inorder))
 
+
 def serialize2(root):
     return root
 
+
 def deserialize2(data):
     return data
+
 
 class Codec:
     def serialize(self, root: TreeNode) -> str:
@@ -120,7 +123,6 @@ class Codec:
         """
         # Solution 2 - 48 ms
         return serialize2(root)
-
 
     def deserialize(self, data: str) -> TreeNode:
         """Decodes your encoded data to tree.
