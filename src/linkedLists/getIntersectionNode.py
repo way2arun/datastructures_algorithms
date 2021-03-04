@@ -54,7 +54,8 @@ class ListNode:
 class Solution:
     def printList(self, node):
         temp = node
-        while (temp):
+        print(temp)
+        while temp:
             print(temp.val)
             temp = temp.next
 
@@ -121,8 +122,8 @@ headB.next.next.next.next = ListNode(4)
 headB.next.next.next.next.next = ListNode(5)
 
 solution = Solution()
-node = solution.getIntersectionNode(headA, headB)
+nodes = solution.getIntersectionNode(headA, headB)
 solution.printList(headA)
 solution.printList(headB)
-print(node)
-solution.printList(node)
+print(nodes)
+solution.printList(nodes)
