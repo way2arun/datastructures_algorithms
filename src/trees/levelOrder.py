@@ -101,3 +101,4 @@ root.right.right = TreeNode(1)
 
 solution = Solution()
 print(solution.levelOrder(root))
+
