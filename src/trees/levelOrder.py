@@ -92,3 +92,12 @@ root.right.right = TreeNode(5)
 
 solution = Solution()
 print(solution.levelOrder(root))
+
+root = TreeNode(5)
+root.left = TreeNode(4)
+root.right = TreeNode(3)
+root.right.left = TreeNode(2)
+root.right.right = TreeNode(1)
+
+solution = Solution()
+print(solution.levelOrder(root))
