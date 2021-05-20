@@ -83,3 +83,12 @@ root.right.right = TreeNode(7)
 
 solution = Solution()
 print(solution.levelOrder(root))
+
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.right.left = TreeNode(4)
+root.right.right = TreeNode(5)
+
+solution = Solution()
+print(solution.levelOrder(root))
