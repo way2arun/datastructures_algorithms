@@ -54,6 +54,7 @@ class Solution:
         return dp[0]
         """
         # Solution 2 - 12 ms
+        """
         length = len(s)
         # length 0 case:
         if length == 0:
@@ -83,6 +84,20 @@ class Solution:
                 num = num + num0
             num0, num1 = num1, num
         return num1
+        """
+        # Solution 3 - 8 ms
+        if not s or s[0] == '0':
+            return 0
+        n = len(s)
+        dp = [0] * (n + 1)
+        dp[0] = 1
+        dp[1] = 1
+        for i in range(2, n + 1):
+            if s[i - 1] != '0':
+                dp[i] += dp[i - 1]
+            if 10 <= int(s[i - 2:i]) <= 26:
+                dp[i] += dp[i - 2]
+        return dp[-1]
 
 
 # Main  Call
